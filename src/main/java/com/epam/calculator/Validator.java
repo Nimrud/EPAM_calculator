@@ -9,7 +9,7 @@ class Validator {
     private static final String TYPE = "prefix|infix|postfix";
     private static final String DESIRED_PARAMETER = NOTATION + "(" + TYPE + ")+";
     private static final String DIGIT = "(-)?(\\d+)((\\.)(\\d{0,3}))?";
-    private static final String OPERATOR = "(-|\\+|\\*|\\/)";
+    static final String OPERATOR = "(-|\\+|\\*|\\/)";
     private static final String LEFT_BRACES = "\\(";
     private static final String RIGHT_BRACES = "\\)";
     private int numberCounter = 0;
@@ -23,7 +23,7 @@ class Validator {
         return matcher.matches();
     }
 
-    private boolean assessArgument(String argument, String regex) {
+    static boolean assessArgument(String argument, String regex) {
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(argument);
         return matcher.matches();

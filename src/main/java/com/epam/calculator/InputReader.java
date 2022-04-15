@@ -1,6 +1,6 @@
 package com.epam.calculator;
 
-class InputReader {
+class InputReader implements Input{
 
     static String[] readAppArguments(String[] args) {
         String[] input = new String[args.length];
